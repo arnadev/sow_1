@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import NavBar from './components/NavBar.jsx'
-import { useState } from 'react'
 import Content from './components/Content.jsx'
 
 const App = () => {
-  const [language, setLanguage] = useState('english')
+  const getInitialLanguage = () => {
+    const savedLanguage = localStorage.getItem('selectedLanguage')
+    return (savedLanguage === 'english' || savedLanguage === 'swedish') ? savedLanguage : 'swedish'
+  }
+
+  const [language, setLanguage] = useState(getInitialLanguage)
+
+  useEffect(() => {
+    localStorage.setItem('selectedLanguage', language)
+  }, [language])
 
   return (
     <>
