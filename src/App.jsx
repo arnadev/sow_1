@@ -1,9 +1,17 @@
 import React from 'react'
+import NavBar from './components/NavBar.jsx'
+import { useState } from 'react'
+import Content from './components/Content.jsx'
 
-export const App = () => {
+const App = () => {
+  const [language, setLanguage] = useState('english')
+
   return (
-    <div>
-      
-    </div>
+    <>
+      <NavBar language={language} setLanguage={setLanguage} />
+      <Content language={language}/>
+    </>
   )
 }
+
+export default App;

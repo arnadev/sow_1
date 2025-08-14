@@ -8,4 +8,121 @@ html, body {
   height: 100%;
   width: 100%;
   background-image: url('https://storage.123fakturera.se/public/wallpapers/sverige43.jpg');
+    background-attachment: fixed;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+
+#navbar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  gap: 48px;
+  padding-top: 20px;
+  justify-content: flex-end;
+  padding-left: 256px;
+  padding-right: 256px;
+  align-items: baseline;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge (old) */
+  user-select: none;         /* Standard */
+
+  #diamond{
+    height: 32px;
+    padding-right: auto;
+    margin-top: 10px;
+    margin-right: auto;
+  }
+
+  .language-flag{
+    height: 18px;
+    margin-left: 16px;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  .nav-item{
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  }
+
+  .language-toggle{
+    position: relative;
+    cursor: pointer;
+  }
+
+  #toggle-card{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 8px;
+    border-radius: 6px;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: rgba(17, 17, 17, 0.7) 0px 10px 15px -3px, rgba(34, 34, 34, 0.7) 0px 4px 6px -4px;
+    z-index: 1000;
+    min-width: 120px;
+  }
+
+  .card{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    .language-flag{
+      margin-left: auto;
+    }
+  }
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  #terms-text {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 30px;
+  }
+
+  #terms-button{
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    color: white;
+    margin-top: 27px;
+    border: none;
+    background-color: rgb(8, 158, 30);
+    padding: 16px 48px;
+    border-radius: 48px;
+    min-width: 270px;
+  }
+  #terms{
+    color: rgba(0, 0, 0, 0.6);
+    background-color: white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    max-width: 750px;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  #lower-terms-button-container {
+    margin-top: 20px;
+    margin-bottom: 47px;
+  }
 }
