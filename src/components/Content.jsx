@@ -1,6 +1,7 @@
 import React from 'react'
 import {contentText} from '../../index'
-
+import TermsButton
+ from './TermsButton'
 const TermsTop = ({language}) => {
   return (
     <div id='content'>
@@ -9,7 +10,7 @@ const TermsTop = ({language}) => {
         </div>
 
         <div>
-            <button id='terms-button'>{contentText[language].buttonText}</button>
+            <TermsButton language={language} />
         </div>
 
         <div id='terms'>
@@ -17,7 +18,7 @@ const TermsTop = ({language}) => {
         </div>
 
         <div id='lower-terms-button-container'>
-            <button id='terms-button'>{contentText[language].buttonText}</button>
+            <TermsButton language={language} />
         </div>
     </div>
   )

@@ -8,60 +8,72 @@ html, body {
   height: 100%;
   width: 100%;
   background-image: url('https://storage.123fakturera.se/public/wallpapers/sverige43.jpg');
-    background-attachment: fixed;
+  background-attachment: fixed;
   font-family: 'Open Sans', sans-serif;
   color: white;
 }
 
+a {
+  text-decoration: none;
+}
+
+/* Common styles */
+.white-text {
+  color: white;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.language-flag {
+  height: 18px;
+}
+
+/* Navigation */
 #navbar {
   top: 0;
   left: 0;
   width: 100%;
   display: flex;
   gap: 48px;
-  padding-top: 20px;
+  padding: 20px 256px 0;
   justify-content: flex-end;
-  padding-left: 256px;
-  padding-right: 256px;
   align-items: baseline;
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE/Edge (old) */
-  user-select: none;         /* Standard */
+  user-select: none;
 
-  #diamond{
+  #diamond {
     height: 32px;
-    padding-right: auto;
-    margin-top: 10px;
-    margin-right: auto;
-  }
-
-  .language-flag{
-    height: 18px;
-    margin-left: 16px;
-  }
-
-  a{
-    text-decoration: none;
-  }
-
-  .nav-item{
-  color: white;
-  font-size: 18px;
-  font-weight: 500;
-  }
-
-  .language-toggle{
-    position: relative;
+    margin: 10px auto 0 0;
     cursor: pointer;
   }
 
-  #toggle-card{
+  .nav-item {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .language-toggle {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    .language-flag {
+      margin-left: 16px;
+    }
+  }
+
+  #toggle-card {
     position: absolute;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 8px;
+    padding: 6px 2px;
     border-radius: 6px;
     background-color: white;
     color: black;
@@ -73,17 +85,48 @@ html, body {
     min-width: 120px;
   }
 
-  .card{
+  .card {
     display: flex;
     align-items: center;
     gap: 8px;
     padding: 10px;
-    .language-flag{
+    
+    .language-flag {
       margin-left: auto;
     }
   }
+
+  #navbar-hamburger{
+    margin-right: auto;
+    font-size: 30px;
+    position: relative;
+  }
+
+  #hamburger-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+  }
+
+  #hamburger-menu.menu-open {
+    max-height: 350px;
+  }
+  #hamburger-menu .hamburger-item {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 15px;
+    padding: 24px;
+    padding-left: 5vw;
+    padding-right: 20vw;
+    font-weight: 600;
+    text-wrap: nowrap;
+  }
 }
 
+/* Content */
 #content {
   display: flex;
   flex-direction: column;
@@ -96,9 +139,8 @@ html, body {
     margin-top: 30px;
   }
 
-  #terms-button{
+  #terms-button {
     font-size: 18px;
-    font-family: 'Open Sans', sans-serif;
     font-weight: 500;
     color: white;
     margin-top: 27px;
@@ -108,7 +150,8 @@ html, body {
     border-radius: 48px;
     min-width: 270px;
   }
-  #terms{
+
+  #terms {
     color: rgba(0, 0, 0, 0.6);
     background-color: white;
     font-size: 16px;
@@ -119,10 +162,30 @@ html, body {
     border-radius: 20px;
     margin-top: 40px;
     text-align: center;
+    a{
+      color: rgb(0, 68, 226);
+    }
   }
 
   #lower-terms-button-container {
-    margin-top: 20px;
-    margin-bottom: 47px;
+    margin: 20px 0 47px;
   }
+}
+
+
+@media (max-width: 1024px) {
+  #navbar{
+    padding: 40px 15vw;
+    padding-bottom: 0;
+  }
+
+  #terms{
+    width: 90vw;
+  }
+
+  html,body{
+    background-position: 0px -200px;
+  }
+
+  
 }
