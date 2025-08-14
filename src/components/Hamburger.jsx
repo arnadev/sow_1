@@ -25,7 +25,7 @@ const Hamburger = ({ language }) => {
 
   return (
     <span id="navbar-hamburger" ref={hamburgerRef}>
-        <span onClick={toggleMenu} style={{ cursor: 'pointer' }}>☰</span>
+        <span onClick={toggleMenu} >☰</span>
         <span id="hamburger-menu" className={isOpen ? 'menu-open' : ''}>
             <a href={nav.home.link} className='hamburger-item'>{nav.home.text}</a>
             <a href={nav.order.link} className='hamburger-item'>{nav.order.text}</a>
