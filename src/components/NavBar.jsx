@@ -36,7 +36,7 @@ const NavBar = ({ language, setLanguage }) => {
       }
       {isDesktop &&
       <>
-        <img onClick={() => { window.location.href = '/login'; }} src='https://storage.123fakturera.se/public/icons/diamond.png' id='diamond' alt='diamond' />
+        <img onClick={() => { window.location.href = '/login'; }} src='/diamond.png' id='diamond' alt='diamond' />
         <a href={nav.home.link} className='nav-item'>{nav.home.text}</a>
         <a href={nav.order.link} className='nav-item'>{nav.order.text}</a>
         <a href={nav.customers.link} className='nav-item'>{nav.customers.text}</a>

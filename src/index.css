@@ -7,11 +7,15 @@
 html, body {
   height: 100%;
   width: 100%;
-  background-image: url('https://storage.123fakturera.se/public/wallpapers/sverige43.jpg');
+  background-image: url('/background.jpg');
   background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: 'Open Sans', sans-serif;
   color: white;
 }
+
+
 
 a {
   text-decoration: none;
@@ -175,6 +179,27 @@ a {
 
 
 @media (max-width: 1024px) {
+  /* Mobile viewport background fix - during scroll when url bar hides*/
+  body {
+    background-image: none; /* Remove default background */
+    position: relative;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120vh; /* Oversized to cover URL bar area - no clipping*/
+    background-image: url('/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    background-position: center;
+  }
+
   #navbar{
     padding: 40px 15vw;
     padding-bottom: 0;
@@ -183,10 +208,4 @@ a {
   #terms{
     width: 90vw;
   }
-
-  html,body{
-    background-position: 0px -200px;
-  }
-
-  
 }

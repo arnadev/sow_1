@@ -5,7 +5,7 @@ const navItems = {
         customers: { text: "Our Customers", link: "/kunder.html" },
         about: { text: "About us", link: "/omoss.html" },
         contact: { text: "Contact Us", link: "/kontaktaoss.html" },
-        language: { text: "English", flag: "https://storage.123fakturere.no/public/flags/GB.png" }
+        language: { text: "English", flag: "/GB.png" }
     },
     swedish: {
         home: { text: "Hem", link: "/index.html" },
@@ -13,7 +13,7 @@ const navItems = {
         customers: { text: "Våra Kunder", link: "/kunder.html" },
         about: { text: "Om Oss", link: "/omoss.html" },
         contact: { text: "Kontakta Oss", link: "/kontaktaoss.html" },
-        language: { text: "Svenska", flag: "https://storage.123fakturere.no/public/flags/SE.png" }
+        language: { text: "Svenska", flag: "/SE.png" }
     }
 };
 
