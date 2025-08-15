@@ -1,9 +1,8 @@
 import React from 'react'
-import {contentText} from '../../index'
 
-const TermsButton = ({language}) => {
+const TermsButton = ({contentText}) => {
   return (
-    <button id='terms-button' onClick={() => {window.close('', '_self', '');history.back()}}>{contentText[language].buttonText}</button>
+    <button id='terms-button' onClick={() => {window.close('', '_self', '');history.back()}}>{contentText?.buttonText}</button>
   )
 }
 
