@@ -1,3 +1,8 @@
+deployed website (copy of terms page from scratch) - mobile friendly 
+
+https://sow-1.vercel.app/
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
