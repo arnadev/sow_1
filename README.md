@@ -1,4 +1,6 @@
-deployed website (copy of terms page from scratch) - mobile friendly 
+>SOW1 task
+
+ Copy of terms page from scratch - responsive and neatly organized - text pulled from supabase
 
 https://sow-1.vercel.app/
 
